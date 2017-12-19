@@ -1,0 +1,157 @@
+body {
+    font-size: 100%;
+    background-color: #d5d5d5;
+}
+
+
+.aligner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:100vh;
+}
+
+
+
+.user-container {
+    background-color: #96858F;
+    position: relative;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: row;
+    width:700px;
+}
+
+.user-list {
+    width:40%;
+    height:375px;
+    overflow: auto;
+}
+
+.user {
+    border:2px solid #c3ccce;
+    color: #D5D5D5;
+    border-radius: 5px;
+    margin:5px;
+    padding:5px;
+}
+
+.user:hover {
+    cursor: pointer;
+}
+
+.user-detail {
+
+    color: #D5D5D5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width:60%;
+    transition: 1s all;
+}
+
+.user__name,
+.user__email {
+    padding:3px;
+}
+
+.contact {
+    border-bottom: 1px solid #d5d5d5;
+    display: flex;
+    flex-direction: column;
+    width:90%;
+    transition: 1s all;
+}
+
+.contact__item {
+    /* padding:2px; */
+    margin:3px;
+    animation: .1s ease-in smoothIn;
+}
+
+
+
+.contact-header {
+    margin:2px;
+    /* padding:2px; */
+}
+
+.address {
+    border-bottom: 1px solid #d5d5d5;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5px;
+    width:90%; 
+}
+
+.address-header {
+    margin:2px;
+    padding:0;
+}
+
+.address__item {
+    margin-left:2px;
+    animation: .3s ease-in smoothIn;
+}
+
+.company-profile {
+    margin:2px;
+    display: flex;
+    flex-direction: column;
+    width:90%;   
+}
+
+.company-profile__item {
+    margin-left:2px;
+    animation: .5s ease-in smoothIn;
+}
+
+.company-profile__item:last-child {
+    margin-top:12px;
+    font-style: italic;
+    /* text-align: center; */
+}
+
+.company-profile-header {
+    margin:2px;
+    padding:0;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.btn {
+    background-color: rgb(131, 115, 124);
+    border:none;
+    color: #d5d5d5;
+    right:10px;;
+    top:10px;
+    position: absolute;
+    font-size: .9rem;
+    height:40px;
+    outline: none;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+
+.selectedUser {
+    background-color: rgb(131, 115, 124);
+}
+
+@keyframes smoothIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
