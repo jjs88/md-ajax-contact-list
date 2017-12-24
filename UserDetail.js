@@ -131,7 +131,7 @@ var UserDetail = (function() {
 
     function clearUserDetail() {
 
-    
+        
         $('.contact').contents().not(':first').remove();
         $('.address').contents().not(':first').remove();
         $('.company-profile').contents().not(':first').remove();
@@ -178,8 +178,7 @@ var UserDetail = (function() {
 
 
     return {
-        init,
-        loadUserDetail
+        init
     }
 
 
