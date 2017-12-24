@@ -3,7 +3,7 @@ var UserDetail = (function() {
     'use strict';
 
     var userData;
-    var currentUser, pos, $btn;
+    var currentUser, pos, $btn, $userDetail, $pleaseSelectUser;
 
     //custom event for grabbing data from UserList module. Now we dont have to make anymore ajax calls after initial ajax call from UserList module
     $(document).on('doc:getData', function(e, ...data) {
@@ -92,8 +92,10 @@ var UserDetail = (function() {
             .append(createUserElements('company-profile', catchPhrase, 'company-profile__item', ''))
 
         
-        // make clear selection button appear
+        // make clear selection button appear and user detail section 
+        $userDetail.show();
         $btn.show();
+        $pleaseSelectUser.hide();
 
     }
 
@@ -139,8 +141,10 @@ var UserDetail = (function() {
         //clear the UserList selection highlight in UserList module
         $(document).trigger('doc:clear-UserList-selection', '');
 
-        //hide clear selection button
-        $btn.toggle();
+        //hide clear selection button and user detail
+        $btn.hide();
+        $userDetail.hide();
+        $pleaseSelectUser.show();
 
     }
 
@@ -167,6 +171,8 @@ var UserDetail = (function() {
     function cacheDOM() {
 
         $btn = $('.btn');
+        $userDetail = $('.user-detail');
+        $pleaseSelectUser = $('.pleaseSelectUser');
     }
 
 
