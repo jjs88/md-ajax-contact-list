@@ -91,6 +91,10 @@ var UserDetail = (function() {
             .append(createUserElements('company-profile', bs, 'company-profile__item', ''))
             .append(createUserElements('company-profile', catchPhrase, 'company-profile__item', ''))
 
+        
+        // make clear selection button appear
+        $btn.show();
+
     }
 
 
@@ -135,6 +139,9 @@ var UserDetail = (function() {
         //clear the UserList selection highlight in UserList module
         $(document).trigger('doc:clear-UserList-selection', '');
 
+        //hide clear selection button
+        $btn.toggle();
+
     }
 
 
@@ -151,6 +158,7 @@ var UserDetail = (function() {
 
         console.log('initialized UserDetail module');
         cacheDOM();
+        $btn.hide();
         events();
 
     }
